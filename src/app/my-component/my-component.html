@@ -2,7 +2,8 @@
 
   <h1>
     Hello {{ name }}!
-  </h1>
+  </h1>  
+
   <mat-table #table [dataSource]="dataSource">
 
     <!--- Note that these columns can be defined in any order.
@@ -35,4 +36,6 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
+
+  <!-- <monaco-editor [options]="editorOptions" [(ngModel)]="code"></monaco-editor> -->
 </div>
