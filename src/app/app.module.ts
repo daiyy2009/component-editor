@@ -9,9 +9,15 @@ import { AppComponent } from "./app.component";
 import { MyComponent } from "./my-component/my-component";
 import { SliderOverviewExample } from "./slider-overview/slider-overview-example";
 import { MonacoEditor } from "./monaco-editor/monaco-editor";
+import { MonacoEditorLoader } from "./monaco-editor/monaco-editor-loader";
 import { MatSliderModule, MatTableModule } from "@angular/material";
 @NgModule({
-  declarations: [AppComponent, MyComponent, SliderOverviewExample, MonacoEditor],
+  declarations: [
+    AppComponent,
+    MyComponent,
+    SliderOverviewExample,
+    MonacoEditor
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -20,7 +26,7 @@ import { MatSliderModule, MatTableModule } from "@angular/material";
     MatTableModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MonacoEditorLoader],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
