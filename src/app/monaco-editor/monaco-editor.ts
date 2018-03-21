@@ -72,7 +72,7 @@ export class MonacoEditor implements AfterViewInit, OnDestroy {
     this._editor = monaco.editor.create(this.editorRef.nativeElement, {
       value: [
         "function x() {", 
-        '\tconsole.log("Hello world!");', 
+        '\tconsole.log("Hello superman!");',
         "}"].join("\n"),
       language: "javascript"
     });

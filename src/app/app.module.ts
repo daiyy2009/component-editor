@@ -9,6 +9,7 @@ import { AppComponent } from "./app.component";
 import { MyComponent } from "./my-component/my-component";
 import { SliderOverviewExample } from "./slider-overview/slider-overview-example";
 import { MonacoEditor } from "./monaco-editor/monaco-editor";
+import { CeTree } from "./components/tree/ce-tree";
 import { MonacoEditorLoader } from "./monaco-editor/monaco-editor-loader";
 import { MatSliderModule, MatTableModule } from "@angular/material";
 @NgModule({
@@ -16,7 +17,8 @@ import { MatSliderModule, MatTableModule } from "@angular/material";
     AppComponent,
     MyComponent,
     SliderOverviewExample,
-    MonacoEditor
+    MonacoEditor,
+    CeTree
   ],
   imports: [
     BrowserModule,

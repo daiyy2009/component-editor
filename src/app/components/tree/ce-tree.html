@@ -1,0 +1,17 @@
+<ul class="ce-tree-container">
+  <li class="ce-tree-item ce-tree-node">
+    <a class="ce-tree-anchor" href="#">
+      <p class="ce-tree-icon {{data.type}}"></p>
+      {{data.name}}
+    </a>
+    <ul class="ce-tree-children">
+
+      <li *ngFor="let item of data.children" class="ce-tree-node">
+        <a class="ce-tree-anchor" href="#">
+          <p class="ce-tree-icon {{item.suffix | lowercase}}">{{item.suffix}}</p>
+          {{item.name}}
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,78 @@
+.ce-tree-container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.ce-tree-children {
+  margin: 0px;
+  padding: 0px;
+}
+
+.ce-tree-node {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+.ce-tree-item {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ce-tree-anchor {
+  line-height: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  color: #000;
+  white-space: nowrap;
+}
+
+.ce-tree-anchor:hover {
+  background-color: rgb(232 , 233, 233)
+}
+
+.ce-tree-icon {
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  margin: 0px;
+  vertical-align: text-top;
+  font-size: small;
+  color: rgb(215 , 89, 40);
+}
+
+.ce-tree-icon.folder {
+  background-image: url(images/folder-open.png);
+  background-size: 17px;
+  background-repeat: no-repeat;
+  background-position: 10px 2px;
+}
+
+.ce-tree-icon.css {
+  color: rgb(45, 134, 200);
+}
+
+.ce-tree-icon.html {
+  color: rgb(215 , 89, 40);
+}
+
+.ce-tree-icon.ts {
+  color: rgb(250, 197, 77);
+}
+
+.ce-tree-icon.js {
+  color: rgb(250, 197, 77);
+}
+
+.ce-tree-icon.json {
+  color: rgb(81, 19, 232);
+}
+
+.ce-tree-children>.ce-tree-node>.ce-tree-anchor {
+  padding-left: 32px;
+}
+
