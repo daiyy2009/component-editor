@@ -7,12 +7,12 @@ import {
   OnDestroy
 } from "@angular/core";
 import { MonacoEditorLoader } from "./monaco-editor-loader";
+import { ReadFileService } from "../service/readfile.service";
 
 import * as _ from "lodash";
 
 declare const monaco: any;
 declare const require: any;
-
 
 /**
  * Example of init with html
@@ -39,6 +39,7 @@ declare const require: any;
 
 @Component({
   selector: "monaco-editor",
+  providers: [ReadFileService],
   template: `
     <div #editor style="width: 1000px; height: 200px">
   `
@@ -48,7 +49,10 @@ export class MonacoEditor implements AfterViewInit, OnDestroy {
   private _disposed = false;
   private _editor: any;
 
-  constructor(private _monacoLoader: MonacoEditorLoader) {}
+  constructor(
+    private _monacoLoader: MonacoEditorLoader,
+    private readFileService: ReadFileService
+  ) {}
 
   ngAfterViewInit() {
     // Wait until monaco editor is available
@@ -69,12 +73,11 @@ export class MonacoEditor implements AfterViewInit, OnDestroy {
   }
 
   initMonaco() {
-    this._editor = monaco.editor.create(this.editorRef.nativeElement, {
-      value: [
-        "function x() {", 
-        '\tconsole.log("Hello superman!");',
-        "}"].join("\n"),
-      language: "javascript"
+    this.readFileService.getFileContent().subscribe(content => {
+      this._editor = monaco.editor.create(this.editorRef.nativeElement, {
+        value: content,
+        language: "html"
+      });
     });
   }
 }
