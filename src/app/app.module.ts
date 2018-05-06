@@ -11,6 +11,7 @@ import { MyComponent } from "./my-component/my-component";
 import { SliderOverviewExample } from "./examples/slider-overview/slider-overview-example";
 import { MonacoEditor } from "./monaco-editor/monaco-editor";
 import { CeTree } from "./components/tree/ce-tree";
+import { Toolbar } from "./components/toolbar/toolbar";
 import { MonacoEditorLoader } from "./monaco-editor/monaco-editor-loader";
 import { MatSliderModule, MatTableModule } from "@angular/material";
 @NgModule({
@@ -19,7 +20,8 @@ import { MatSliderModule, MatTableModule } from "@angular/material";
     MyComponent,
     SliderOverviewExample,
     MonacoEditor,
-    CeTree
+    CeTree,
+    Toolbar
   ],
   imports: [
     BrowserModule,
